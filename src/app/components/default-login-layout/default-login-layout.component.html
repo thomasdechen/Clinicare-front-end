@@ -12,20 +12,23 @@
                     <li><a href="#">Contato</a></li>
                 </ul>
             </section>
-            <section class="login col-3">
-                <a href="#" class="login-button">Entrar</a> <!-- Transformando o link em um botão -->
+            <section class="entrar col-3">
+                <a routerLink="/login" class="entrar-button">Entrar</a>
             </section>
         </div>
     </header>
     
     
 
-    <section>
-        <h2>Faça login em sua conta</h2>
-        <button></button>
-        <div>
+    <section class="login">
+        <h2>{{title}}</h2>
+        <ng-content></ng-content>
+        <button class="btn-login">{{primaryBtnText}}</button>
+        <div class="divider">
+            <div></div>
             <span>OU</span>
+            <div></div>
         </div>
-        <button></button>
+        <button class="btn-signup">{{secondaryBtnText}}</button>
     </section>
 </main>
