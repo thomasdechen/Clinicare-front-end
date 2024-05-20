@@ -109,7 +109,7 @@ main {
         width: 100%;
 
         font-size: 14px;
-        font-family: 'Outfit400', sans-serif;
+        font-family: '400', sans-serif;
         color: lightgray;
         text-transform: uppercase;
 
@@ -122,15 +122,14 @@ main {
 
 
     .login h2 {
-        font-family: 'Outfit', sans-serif;
-        font-weight: 400;
+        font-weight: 600;
         margin-bottom: 20px;
     }
 
     .login button {
         width: 100%; 
         padding: 15px;
-        font-family: 'Outfit600', sans-serif;
+        font-family: '600', sans-serif;
         font-size: 20px;
         font-weight: bold;
         border-radius: 8px; 
@@ -141,6 +140,10 @@ main {
         background-color: rgb(0, 120, 246); 
         color: white; 
         border: none; 
+
+        &:disabled {
+            opacity: 0.7;
+        }
     }
 
     .btn-login:hover {

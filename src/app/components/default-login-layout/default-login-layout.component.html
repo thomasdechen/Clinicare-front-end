@@ -23,12 +23,18 @@
     <section class="login">
         <h2>{{title}}</h2>
         <ng-content></ng-content>
-        <button class="btn-login">{{primaryBtnText}}</button>
+        <button 
+            class="btn-login" 
+            (click)="submit()"
+            [disabled]="disablePrimaryBtn"
+        >
+            {{primaryBtnText}}
+        </button>
         <div class="divider">
             <div></div>
             <span>OU</span>
             <div></div>
         </div>
-        <button class="btn-signup">{{secondaryBtnText}}</button>
+        <button class="btn-signup" (click)="navigate()" >{{secondaryBtnText}}</button>
     </section>
 </main>
