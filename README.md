@@ -1,6 +1,6 @@
 # ClinicareFront
 
-Sistema web de uma clínica veterinária com a finalidade de estudar as seguintes tecnlogias: Angular 17+ e java spring.
+Sistema web de uma clínica médica com a finalidade de estudar as seguintes tecnlogias: Angular 17+ e java spring.
 
 O usuário podera logar como paciente, médico(a) ou secretário(a), cada um tendo acessos a diferentes funções dentro do sistema.
 
