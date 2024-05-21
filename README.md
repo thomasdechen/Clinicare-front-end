@@ -1,4 +1,6 @@
-Sistema web de uma clínica veterinária com a finalidade de estudar as seguintes tecnlogias: Angular 17+ e java spring.
+# ClinicareFront <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png" width="60px" height="60px" alt="Logo do Angular">
+
+Sistema web de uma clínica médica com a finalidade de estudar as seguintes tecnlogias: Angular 17+ e java spring.
 
 O usuário podera logar como paciente, médico(a) ou secretário(a), cada um tendo acessos a diferentes funções dentro do sistema.
 
@@ -18,7 +20,6 @@ Funções disponíveis para os secretários(as):
 - Visualizar a agenda do médico(a) responsável
 
 
-# ClinicareFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
