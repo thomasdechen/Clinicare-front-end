@@ -1,6 +1,8 @@
 # ClinicareFront
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png" width="150px" height="150px" align-items: center alt="Logo do Angular">
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png" width="150px" height="150px" alt="Logo do Angular">
+</p>
 
 
 Sistema web de uma clínica médica com a finalidade de estudar as seguintes tecnlogias: Angular 17+ e java spring.
