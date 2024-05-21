@@ -1,5 +1,8 @@
 # ClinicareFront
 
+<img src="https://miro.medium.com/v2/resize:fit:828/format:webp/0*UC-tiSyyd6b2JNaA" alt="Logo do Angular">
+
+
 Sistema web de uma clínica médica com a finalidade de estudar as seguintes tecnlogias: Angular 17+ e java spring.
 
 O usuário podera logar como paciente, médico(a) ou secretário(a), cada um tendo acessos a diferentes funções dentro do sistema.
