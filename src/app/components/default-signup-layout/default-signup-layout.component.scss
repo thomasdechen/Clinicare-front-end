@@ -1,9 +1,10 @@
+/* Geral */
 @import "../../../styles/variables.scss";
 
 main {
     height: 100%;
 
-    // Header 
+    /* Header */
     header {
         width: 100%;
         margin-top: 20px;
@@ -63,7 +64,6 @@ main {
     .nav-items ul li a:hover {
         color: $primary-color; 
     }
-    
 
     .entrar {
         margin-left: auto;
@@ -85,41 +85,23 @@ main {
         background-color: rgb(3, 91, 185);
     }
 
-
-    // Login
+    /* Content */
+    .content {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 100px;
+    }
 
     .login {
         font-family: 'Outfit600', sans-serif;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 100px 0px;
         max-width: 450px;
-        margin: 0 auto; 
-        text-align: center; 
+        width: 60%;
+        margin-left: 10px; /* Adiciona margem à esquerda para aproximar da imagem */
+        margin-right: 100px;
     }
-
-    
-    .divider {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        width: 100%;
-
-        font-size: 14px;
-        font-family: '400', sans-serif;
-        color: lightgray;
-        text-transform: uppercase;
-
-        div {
-            flex-grow: 1;
-            height: 2px;
-            background-color: lightgray;
-        }
-    }
-
 
     .login h2 {
         font-weight: 600;
@@ -129,7 +111,7 @@ main {
     .login button {
         width: 100%; 
         padding: 15px;
-        font-family: '600', sans-serif;
+        font-family: 'Outfit', sans-serif;
         font-size: 20px;
         font-weight: bold;
         border-radius: 8px; 
@@ -157,14 +139,38 @@ main {
     }
 
     .btn-signup:hover {
-        background-color: rgb(224, 224, 224)
+        background-color: rgb(224, 224, 224);
     }
 
     .login div {
         margin: 10px 0; 
     }
     
-    .form-section {
+    .signup-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
 
+    .signup-bottom span {
+        font-family: 'Outfit400', sans-serif;
+        margin-right: 10px;
+    }
+
+    .signup-link {
+        font-family: 'Outfit400', sans-serif;
+        color: rgb(0, 120, 246);
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .signup-link:hover {
+        text-decoration: underline;
+    }
+
+    .image-section img {
+        width: 300px;
     }
 }

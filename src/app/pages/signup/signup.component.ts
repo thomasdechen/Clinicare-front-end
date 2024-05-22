@@ -12,13 +12,16 @@ interface SignupForm {
   email: FormControl<string>;
   password: FormControl<string>;
   passwordConfirm: FormControl<string>;
+  role: FormControl<string>;
+  gender: FormControl<string>;
+  codigo: FormControl<string | null>;
 }
 
 @Component({
   selector: 'app-signup',
   standalone: true,
   imports: [
-    CommonModule, // Adicione esta linha
+    CommonModule,
     DefaultSignupLayoutComponent,
     ReactiveFormsModule,
     PrimaryInputComponent
@@ -42,7 +45,10 @@ export class SignupComponent {
       name: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.minLength(3)] }),
       email: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.email] }),
       password: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.minLength(6)] }),
-      passwordConfirm: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.minLength(6)] })
+      passwordConfirm: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.minLength(6)] }),
+      role: new FormControl('paciente', { nonNullable: true, validators: [Validators.required]}),
+      gender: new FormControl('', { nonNullable: true, validators: [Validators.required]}),
+      codigo: new FormControl<string | null>(null) // Inicializa com null e permite strings
     }, { validators: this.passwordMatchValidator });
   }
 
@@ -54,21 +60,21 @@ export class SignupComponent {
 
   submit() {
     if (this.signupForm.invalid) {
-      this.signupForm.markAllAsTouched(); // Certifique-se de marcar todos os campos como tocados
+      this.signupForm.markAllAsTouched();
       this.toastService.error("Por favor, preencha todos os campos corretamente.");
       return;
     }
-
-    const { name, email, password } = this.signupForm.getRawValue();
-
-    this.loginService.signup(name, email, password).subscribe({
+  
+    const { name, email, password, role, gender, codigo } = this.signupForm.getRawValue();
+    this.loginService.signup(name, email, password, role, gender, codigo).subscribe({
       next: () => {
         this.toastService.success("Cadastro realizado com sucesso!");
         this.router.navigate(["/login"]);
       },
-      error: () => this.toastService.error("Erro inesperado! Tente novamente mais tarde")
+      error: (error) => this.toastService.error(error.error || "Erro inesperado! Tente novamente mais tarde")
     });
   }
+  
 
   navigate() {
     this.router.navigate(["/login"]);

@@ -1,6 +1,6 @@
 <app-default-signup-layout
   title="Crie uma conta"
-  primaryBtnText="Criar conta"
+  primaryBtnText="Cadastrar"
   secondaryBtnText="Entrar"
   (submit)="submit()"
   (navigate)="navigate()"
@@ -42,9 +42,35 @@
       <img src="/assets/svg/password-icon.svg">
     </app-primary-input>
 
+    
+      <app-primary-input
+        formControlName="codigo"
+        inputName="codigo"
+        type="text"
+        label="Código (opcional)"
+      >
+        <img src="/assets/svg/password-icon.svg">
+      </app-primary-input>
+    
+
     <div *ngIf="signupForm.hasError('passwordMismatch') && signupForm.get('passwordConfirm')?.dirty">
-        Senhas não coincidem.
-      </div>
-      
+      Senhas não coincidem.
+    </div>
+
+    <div class="selection-options">
+      <label for="role">Você é um(a):</label>
+      <select formControlName="role" id="role">
+        <option value="paciente">Paciente</option>
+        <option value="medico">Médico(a)</option>
+        <option value="secretario">Secretário(a)</option>
+      </select>
+
+      <label for="gender">Gênero:</label>
+      <select formControlName="gender" id="gender">
+        <option value="" disabled selected>Selecionar</option>
+        <option value="feminino">Feminino</option>
+        <option value="masculino">Masculino</option>
+      </select>
+    </div>
   </form>
 </app-default-signup-layout>

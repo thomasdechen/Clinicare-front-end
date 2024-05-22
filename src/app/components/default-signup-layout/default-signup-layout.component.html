@@ -17,24 +17,25 @@
             </section>
         </div>
     </header>
-    
-    
 
-    <section class="login">
-        <h2>{{title}}</h2>
-        <ng-content></ng-content>
-        <button 
-            class="btn-login" 
-            (click)="submit()"
-            [disabled]="disablePrimaryBtn"
-        >
-            {{primaryBtnText}}
-        </button>
-        <div class="divider">
-            <div></div>
-            <span>OU</span>
-            <div></div>
-        </div>
-        <button class="btn-signup" (click)="navigate()" >{{secondaryBtnText}}</button>
+    <section class="content">
+        <section class="image-section">
+            <img src="../../../assets/svg/Médica 3 1.svg" alt="">
+        </section>
+        <section class="login">
+            <h2>{{title}}</h2>
+            <ng-content></ng-content>
+            <button 
+                class="btn-login" 
+                (click)="submit()"
+                [disabled]="disablePrimaryBtn"
+            >
+                {{primaryBtnText}}
+            </button>
+            <div class="signup-bottom">
+                <span>Já possui uma conta?</span>
+                <a class="signup-link" (click)="navigate()">{{secondaryBtnText}}</a>
+            </div>
+        </section>
     </section>
 </main>
